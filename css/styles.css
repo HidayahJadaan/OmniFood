@@ -232,35 +232,34 @@ body {
 .container {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 0 3.2rem;
+  padding: 0 2rem;
 }
 
 .grid {
   display: grid;
   row-gap: 9.6rem;
   column-gap: 6.4rem;
- 
 }
 
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.step-img{
-    width: 40%;
+.step-img {
+  width: 40%;
 }
 
 .heading-secondary,
-.heading-teriary{
-color: #333;
-font-weight: 700;
-letter-spacing: -0.5px;
-font-size: 3rem;
-line-height: 1.2;
-color: #45260a;
-margin-bottom: 9.6rem;
+.heading-teriary {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #45260a;
+  margin-bottom: 9.6rem;
 }
-.subheading{
+.subheading {
   display: block;
   font-size: 1.5rem;
   font-weight: 500;
@@ -270,45 +269,84 @@ margin-bottom: 9.6rem;
   letter-spacing: 0.75px;
 }
 
-.step-number{
-  font-size: 5.6rem;
+.step-number {
+  font-size: 5.9rem;
   font-weight: 600;
-  color: #eee;
+  color: #ddd;
   margin-bottom: 1.2rem;
 }
 
-.heading-teriary{
-font-size: 1.6rem;
-line-height: 1.2;
-margin-bottom: 1.2rem;
+.heading-teriary {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
 }
 
-.step-description{
+.step-description {
   font-size: 1.4rem;
   line-height: 1.8;
 }
-.step-img-box{
+.grid--center-vertically {
+  align-items: center;
+}
+.step-img-box {
   position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.step-img-box::before{
+.step-img-box::before,
+.step-img-box::after {
   content: "";
   display: block;
-  width: 80%;
-  /* height: 60%; */
-  /* 60% of parents width */
-  padding-bottom: 80%; 
-  background-color: #fdf2e9;
+  border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 50%;
+}
+
+.step-img-box::before {
+  width: 70%;
+  /* height: 60%; */
+
+  /* 60% of parent's width */
+  padding-bottom: 70%;
+
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+
+.step-img-box::after {
+  width: 55%;
+  padding-bottom: 55%;
+  background-color: #fae5d3;
   z-index: -1;
 }
-.grid--center-vertically{
-  align-items: center;
+.section-featured{
+  padding: 4.8rem 0;
 }
+
+.heading-featured-in{
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #888;
+}
+
+.logos{
+  display: flex;
+  justify-content: space-around
+}
+
+.logos img{
+  height: 2.2rem;
+  filter: brightness(0);
+  opacity:  50%;
+}
+
